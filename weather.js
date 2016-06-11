@@ -109,7 +109,8 @@ var parse_weather = function(data){
             }
         }
     }
-    
+    //remove the loading hint
+    $("#loading").hide();
     if(will_rain)
         $('#main').append(UMBRELLA_IMG_SRC);
     else if (effective_list[0].weather[0].main.toLowerCase()=="clouds"){

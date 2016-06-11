@@ -52,7 +52,8 @@ var getWeather = function(){
 //http://ip-api.com/json
 var getCity = function(callback){
     JSON_REQUEST("http://ipinfo.io", function(data){
-            city=data["city"];
+            //city=data["city"];
+            city="Toronto";
             $('#city_name').append(conscruct_city_tag(city));
             callback();
     });

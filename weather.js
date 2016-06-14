@@ -180,7 +180,7 @@ var parse_weather = function(data){
     
     $('#main').append("<div><br><span>最低温度是"+lowest_temp+"&#8451; , 最高温度是"+highest_temp+"&#8451;</span></div>");
 
-    $('#main').append('<div style="margin-top:5%"><a href="about.html">About</a><br><br><span></span></div>');
+    $('#main').append('<div style="margin-top:5%"><a href="https://github.com/ginward/ginward.github.io/blob/master/README.md">About</a><br><br><span></span></div>');
     
 }
 

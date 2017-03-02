@@ -158,10 +158,6 @@ body, html {height: 100%}
 
         map.addOverlay(marker);
 
-        var steptext = dirn.getRoute(0).getStep(stepnum).getDescriptionHtml();
-
-        document.getElementById("step").innerHTML = steptext;
-
         setTimeout("animate(0)",2000);  // Allow time for the initial map display
 
       });

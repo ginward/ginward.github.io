@@ -11,22 +11,64 @@
 body,h1 {font-family: "Raleway", sans-serif}
 body, html {height: 100%}
 .bgimg {
-    background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
-    min-height: 100%;
-    background-position: center;
-    background-size: cover;
+    height: 100%;
+}
+body{
+  background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
+  min-height: 100%;
 }
 #map {
-  width: 800px;
+  width: 100%;
   height: 500px;
   background: white;
 }
-@media screen and (max-width: 500px){
+#map_container{
+  transform: translate(0, -50%); 
+  position: absolute; 
+  top:50%; 
+  right: 10%;
+  width: 55%;
+}
+#iphone_img{
+  transform: translate(0, -50%); 
+  position: absolute; 
+  top:50%; 
+  left: 10%;
+}
+@media screen and (max-width: 1300px) and (min-width: 687px){
+  #map_container{
+    right: 3%;
+  }
+  #iphone_img{
+    left: 3%;
+  }
+}
+@media screen and (max-width: 687px){
+  .bgimg {
+    height: auto;
+    width: auto;
+  }
   #map {
     width: 100%;
     height: 300px;
     background: white;
     display: block;
+  }
+  #map_container{
+    transform: translate(0, 0); 
+    position: relative; 
+    margin-top: 10px;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+  }
+  #iphone_img{
+    transform: translate(0, 0); 
+    position: relative; 
+    width: 100%;
+    text-align: center;
+    left: 0;
+    margin-top:10px;
   }
 }
 </style>
@@ -37,10 +79,10 @@ body, html {height: 100%}
     Dolphin
     <span style="font-size:12px;">No Crimes, Anymore</span>
   </div>
-  <div style="transform: translate(0, -50%); position: absolute; top:50%; left: 10%;">
+  <div id="iphone_img">
     <img src="iphone.png">
   </div>
-  <div id="map_container" style="transform: translate(0, -50%); position: absolute; top:50%; right: 10%;">
+  <div id="map_container">
     <div id="map"></div>
     <div id="step"></div>
     <div id="distance"></div>

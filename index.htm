@@ -33,6 +33,8 @@ body, html {height: 100%}
     <img src="iphone.png">
   </div>
   <div id="map" style="transform: translate(0, -50%); position: absolute; top:50%; right: 10%;"></div>
+  <div id="step"></div>
+  <div id="distance"></div>
   <div class="w3-display-bottomleft w3-padding-large">
     Copyright Jinhua Wang
   </div>
@@ -157,6 +159,10 @@ body, html {height: 100%}
         marker = new GMarker(poly.getVertex(0),{icon:car});
 
         map.addOverlay(marker);
+
+        var steptext = dirn.getRoute(0).getStep(stepnum).getDescriptionHtml();
+
+        document.getElementById("step").innerHTML = steptext;
 
         setTimeout("animate(0)",2000);  // Allow time for the initial map display
 
